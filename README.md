@@ -47,5 +47,8 @@ Run in a Docker container with:
     docker build -t arris_stats .
     docker run arris_stats
 
-
-
+## Crontab
+chmod +x scripts/arris_sb8200_stats_v2.py
+edit scripts/config.ini
+edit crontab with something along the lines of the 
+```*/15 *  *  *  * ${LOCATION}/arris_sb8200_stats_v2.py --config ${LOCATION}/config.ini```
